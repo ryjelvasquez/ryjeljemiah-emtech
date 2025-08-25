@@ -1,0 +1,1291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Psychology Career - Your Path to Technology</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: "Poppins", sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            scroll-behavior: smooth;
+        }
+
+        header {
+            background: linear-gradient(135deg, #6a4c93 0%, #8e44ad 100%);
+            padding: 15px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        header .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        header .logo h1 {
+            font-size: 1.8em;
+            font-weight: 700;
+            color: #fff;
+        }
+
+        header nav ul {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+
+        header nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 8px 15px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        header nav ul li a:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateY(-2px);
+        }
+
+        header nav ul li a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 3px;
+            background: #f39c12;
+            transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border-radius: 2px;
+        }
+
+        header nav ul li a:hover::after {
+            width: 100%;
+        }
+
+        main {
+            margin-top: 100px;
+        }
+
+        .hero {
+            background: linear-gradient(rgba(106, 76, 147, 0.85), rgba(142, 68, 173, 0.85)), 
+                url("https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80") center/cover;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: #fff;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 20% 50%, rgba(106, 76, 147, 0.4) 0%, transparent 50%),
+                radial-gradient(circle at 80% 50%, rgba(142, 68, 173, 0.4) 0%, transparent 50%);
+            animation: gradientShift 15s ease-in-out infinite;
+        }
+
+        @keyframes gradientShift {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
+        .hero .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: 4em;
+            font-weight: 900;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            animation: fadeInUp 1.2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        .hero p {
+            font-size: 1.5em;
+            margin-bottom: 30px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+            animation: fadeInUp 1.2s cubic-bezier(0.4, 0, 0.2, 1) forwards 0.3s;
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero p {
+            font-size: 1.5em;
+            margin-bottom: 30px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: #f39c12;
+            color: #6a4c93;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.2em;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+            animation: fadeInUp 1.2s cubic-bezier(0.4, 0, 0.2, 1) forwards 0.6s;
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        .cta-button:hover {
+            background: #f1c40f;
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
+        }
+
+        section {
+            padding: 80px 0;
+        }
+
+        section .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        section h2 {
+            font-size: 2.5em;
+            color: #6a4c93;
+            text-align: center;
+            margin-bottom: 50px;
+            position: relative;
+            padding-bottom: 25px;
+            font-weight: 800;
+            letter-spacing: -1px;
+        }
+
+        section h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 5px;
+            background: #f39c12;
+            border-radius: 3px;
+        }
+
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+
+
+        .card {
+            background: #fff;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .card:hover {
+            transform: translateY(-15px) scale(1.02);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0));
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            z-index: -1;
+        }
+
+        .card:hover::before {
+            opacity: 1;
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .card:hover img {
+            transform: scale(1.08);
+        }
+
+        .card h3 {
+            color: #6a4c93;
+            padding: 20px 20px 10px;
+            font-size: 1.2em;
+            font-weight: 700;
+            transition: all 0.3s ease;
+        }
+
+        .card:hover h3 {
+            color: #8e44ad;
+        }
+
+        .card p {
+            padding: 0 20px 20px;
+            color: #666;
+            font-size: 1.1em;
+            line-height: 1.7;
+            transition: all 0.3s ease;
+        }
+
+        .card:hover p {
+            color: #555;
+        }
+        
+        .card-detail-box {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(106, 76, 147, 0.95);
+            color: #fff;
+            padding: 15px;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            z-index: 10;
+            border-radius: 15px;
+            overflow-y: auto;
+            overflow-x: hidden;
+        }
+        
+        .card:hover .card-detail-box {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .card-detail-box h4 {
+            font-size: 1.1em;
+            margin-bottom: 8px;
+            color: #fff !important;
+            font-weight: 600;
+        }
+        
+        .card-detail-box p {
+            color: #fff !important;
+            font-size: 0.85em;
+            margin-bottom: 6px;
+            font-weight: 400;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+            line-height: 1.4;
+        }
+        
+        .card-detail-box ul {
+            padding-left: 15px;
+            margin-bottom: 8px;
+            color: #fff;
+        }
+        
+        .card-detail-box li {
+            margin-bottom: 3px;
+            font-size: 0.8em;
+            color: #fff !important;
+            line-height: 1.3;
+        }
+
+        .statistics {
+            background: linear-gradient(135deg, #6a4c93 0%, #8e44ad 100%);
+            color: #fff;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .statistics::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml,<svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><rect width="1" height="1" fill="rgba(255,255,255,0.05)"/></svg>');
+            opacity: 0.1;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .stat-item {
+            padding: 20px;
+            transition: all 0.3s ease;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .stat-item:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.15);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .stat-number {
+            font-size: 3em;
+            font-weight: 800;
+            color: #f39c12;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .stat-item:hover .stat-number {
+            transform: scale(1.1);
+            color: #f1c40f;
+        }
+
+        .stat-item div:last-child {
+            color: #fff;
+            font-size: 1.2em;
+            font-weight: 500;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .stat-item:hover div:last-child {
+            color: #f39c12;
+            transform: scale(1.05);
+        }
+
+        .faq {
+            background: #f8f9fa;
+        }
+
+        .accordion-item {
+            background: #fff;
+            margin-bottom: 15px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .accordion-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .accordion-header {
+            background: #6a4c93;
+            color: #fff;
+            padding: 20px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .accordion-header:hover {
+            background: #8e44ad;
+        }
+
+        .accordion-content {
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .accordion-content.active {
+            padding: 20px;
+            max-height: 500px;
+        }
+
+        .accordion-content p {
+            color: #555;
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+
+        .accordion-content ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .accordion-content ul li {
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+            color: #666;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .accordion-content ul li:last-child {
+            border-bottom: none;
+        }
+
+        .accordion-content ul li::before {
+            content: '•';
+            color: #6a4c93;
+            font-weight: bold;
+        }
+
+        .contact {
+            background: #fff;
+        }
+
+        .contact form {
+            max-width: 600px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .contact form:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .contact form input,
+        .contact form textarea {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 20px;
+            border: 2px solid #eee;
+            border-radius: 8px;
+            font-size: 1em;
+            transition: all 0.3s ease;
+        }
+
+        .contact form input:focus,
+        .contact form textarea:focus {
+            border-color: #6a4c93;
+            box-shadow: 0 0 0 3px rgba(106, 76, 147, 0.1);
+            outline: none;
+        }
+
+        .contact form button {
+            background: #6a4c93;
+            color: #fff;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .contact form button:hover {
+            background: #8e44ad;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .career-roadmap {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .roadmap-item {
+            background: #fff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .roadmap-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(106, 76, 147, 0.05), rgba(142, 68, 173, 0.05));
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .roadmap-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+        }
+
+        .roadmap-item:hover::before {
+            opacity: 1;
+        }
+
+        .roadmap-icon {
+            font-size: 3em;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .roadmap-item h3 {
+            color: #6a4c93;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+
+        .roadmap-item p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        footer {
+            background: linear-gradient(135deg, #6a4c93 0%, #8e44ad 100%);
+            color: #fff;
+            padding: 40px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 0% 0%, rgba(255,255,255,0.1) 0%, transparent 50%),
+                radial-gradient(circle at 100% 100%, rgba(255,255,255,0.1) 0%, transparent 50%);
+            opacity: 0.1;
+        }
+
+        .footer-links {
+            margin-top: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .footer-links ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-links ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links ul li a {
+            color: #fff;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .footer-links ul li a:hover {
+            color: #f39c12;
+            transform: translateX(5px);
+        }
+
+        .footer-link {
+            position: relative;
+            cursor: pointer;
+        }
+
+        .footer-link::after {
+            content: attr(data-tooltip);
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0, 0, 0, 0.9);
+            color: #fff;
+            padding: 10px 15px;
+            border-radius: 8px;
+            font-size: 0.9em;
+            white-space: nowrap;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 1000;
+            margin-bottom: 10px;
+        }
+
+        .footer-link::before {
+            content: '';
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            border: 5px solid transparent;
+            border-top-color: rgba(0, 0, 0, 0.9);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            margin-bottom: 5px;
+        }
+
+        .footer-link:hover::after,
+        .footer-link:hover::before {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .references {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 80px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .references::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 20% 50%, rgba(106, 76, 147, 0.05) 0%, transparent 50%),
+                radial-gradient(circle at 80% 50%, rgba(142, 68, 173, 0.05) 0%, transparent 50%);
+            opacity: 0.3;
+        }
+
+        .references-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .reference-card {
+            background: #fff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .reference-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .reference-card h3 {
+            color: #6a4c93;
+            margin-bottom: 20px;
+            font-size: 1.3em;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #f39c12;
+        }
+
+        .reference-card ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .reference-card ul li {
+            margin-bottom: 15px;
+            padding: 10px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .reference-card ul li:hover {
+            background: rgba(106, 76, 147, 0.1);
+            transform: translateX(5px);
+        }
+
+        .reference-link {
+            color: #6a4c93;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            display: block;
+        }
+
+        .reference-link:hover {
+            color: #8e44ad;
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5em;
+            }
+            
+            header nav ul {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Psychology Career</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#overview">Overview</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#studies">Studies</a></li>
+                    <li><a href="#career">Career Path</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero" id="home">
+            <div class="container">
+                <h1>Your Future in Psychology</h1>
+                <p>Empowering innovation, transforming the future</p>
+                <a href="#contact" class="cta-button">Start Your Journey</a>
+            </div>
+        </section>
+
+        <section id="overview">
+            <div class="container">
+                <h2>Psychology Career Overview</h2>
+                <p style="text-align: center; font-size: 1.2em; margin-bottom: 40px; color: #666;">
+                   Psychology is the scientific study of the mind, brain, and behavior, encompassing both internal mental processes like thoughts and emotions, and outward, observable behaviors
+                </p>
+                <div class="cards-grid">
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Clinical Psychology">
+                        <h3>Clinical Psychology</h3>
+                        <p>Work directly with clients to assess, diagnose, and treat mental health disorders through evidence-based therapeutic approaches.</p>
+                    </div>
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Research Psychology">
+                        <h3>Research Psychology</h3>
+                        <p>Conduct scientific studies to advance our understanding of human behavior, cognition, and mental processes.</p>
+                    </div>
+
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Organizational Psychology">
+                        <h3>Organizational Psychology</h3>
+                        <p>Apply psychological principles to improve workplace productivity, employee satisfaction, and organizational effectiveness.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="education">
+            <div class="container">
+                <h2>Educational Requirements</h2>
+                <div class="cards-grid">
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Bachelor's Degree">
+                        <h3>Bachelor's Degree (4 years)</h3>
+                        <p>Start with a Bachelor's in Psychology, learning fundamental concepts in human behavior, research methods, and psychological theories.</p>
+                    </div>
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Master's Degree">
+                        <h3>Master's Degree (2-3 years)</h3>
+                        <p>Specialize in your area of interest with advanced coursework, research, and supervised clinical experience.</p>
+                    </div>
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Doctorate">
+                        <h3>Doctorate (4-7 years)</h3>
+                        <p>Pursue a Ph.D. or Psy.D. for clinical practice, research positions, or academic careers in psychology.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills">
+            <div class="container">
+                <h2>Essential Skills & Qualities</h2>
+                <div class="cards-grid">
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Communication Skills">
+                        <h3>Communication Skills</h3>
+                        <p>Excellent verbal and written communication abilities to effectively interact with clients, colleagues, and research participants.</p>
+                        <div class="card-detail-box">
+                            <h4>Communication Skills</h4>
+                            <p>Effective communication is essential for psychologists to understand clients, explain concepts, and build therapeutic relationships.</p>
+                            <h4>Key Components:</h4>
+                            <ul>
+                                <li>Active listening</li>
+                                <li>Clear verbal expression</li>
+                                <li>Effective questioning techniques</li>
+                                <li>Nonverbal communication awareness</li>
+                                <li>Writing skills for reports and documentation</li>
+                            </ul>
+                            <h4>Development Tips:</h4>
+                            <p>Practice active listening, seek feedback on your communication style, and study therapeutic communication techniques through coursework and supervised practice.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1516585427167-9f4af9627e6c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Empathy">
+                        <h3>Empathy & Compassion</h3>
+                        <p>Ability to understand and share the feelings of others, creating a safe and supportive therapeutic environment.</p>
+                        <div class="card-detail-box">
+                            <h4>Empathy & Compassion</h4>
+                            <p>Empathy and compassion are foundational skills that allow psychologists to connect with clients and understand their experiences.</p>
+                            <h4>Key Components:</h4>
+                            <ul>
+                                <li>Perspective-taking</li>
+                                <li>Emotional recognition</li>
+                                <li>Nonjudgmental attitude</li>
+                                <li>Genuine care and concern</li>
+                                <li>Appropriate emotional boundaries</li>
+                            </ul>
+                            <h4>Development Tips:</h4>
+                            <p>Practice mindfulness, engage in diverse social experiences, read literature from different perspectives, and seek supervision to develop your empathic abilities.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Critical Thinking">
+                        <h3>Critical Thinking</h3>
+                        <p>Strong analytical skills to assess complex situations, evaluate research findings, and develop effective treatment plans.</p>
+                        <div class="card-detail-box">
+                            <h4>Critical Thinking</h4>
+							<p>Critical thinking enables psychologists to analyze information objectively, evaluate evidence, and make sound clinical decisions.</p>
+                            <h4>Key Components:</h4>
+                            <ul>
+                                <li>Logical reasoning</li>
+                                <li>Evidence evaluation</li>
+                                <li>Problem-solving abilities</li>
+                                <li>Recognition of biases</li>
+                                <li>Systematic analysis</li>
+                            </ul>
+                            <h4>Development Tips:</h4>
+                            <p>Practice analyzing research studies, engage in case conceptualization exercises, seek diverse perspectives, and develop your ability to identify logical fallacies.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="studies">
+            <div class="container">
+                <h2>Psychology Studies & Research Areas</h2>
+                <div class="cards-grid">
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1507842217343-583bb7270b66?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Cognitive Psychology">
+                        <h3>Cognitive Psychology</h3>
+                        <p>Study of mental processes including attention, language use, memory, perception, problem solving, creativity, and thinking.</p>
+                        <div class="card-detail-box">
+                            <h4>Cognitive Psychology</h4>
+                            <p>Cognitive psychology examines how people perceive, think, remember, and learn. This field focuses on internal mental processes and how they influence behavior.</p>
+                            <h4>Key Areas:</h4>
+                            <ul>
+                                <li>Memory and learning mechanisms</li>
+                                <li>Attention and perception</li>
+                                <li>Language processing</li>
+                                <li>Problem-solving and decision-making</li>
+                                <li>Reasoning and intelligence</li>
+                            </ul>
+                            <h4>Career Applications:</h4>
+                            <p>Cognitive psychologists work in research, education, human-computer interaction, and developing cognitive therapies for mental health conditions.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1484820540004-14229fe36ca4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Developmental Psychology">
+                        <h3>Developmental Psychology</h3>
+                        <p>Examines human growth and development across the lifespan, from infancy through old age, including physical, cognitive, and social changes.</p>
+                        <div class="card-detail-box">
+                            <h4>Developmental Psychology</h4>
+                            <p>Developmental psychology studies how people grow and change throughout their lives, from infancy to old age.</p>
+                            <h4>Key Areas:</h4>
+                            <ul>
+                                <li>Cognitive development</li>
+                                <li>Social and emotional development</li>
+                                <li>Language acquisition</li>
+                                <li>Moral development</li>
+                                <li>Identity formation</li>
+                                <li>Aging processes</li>
+                            </ul>
+                            <h4>Career Applications:</h4>
+                            <p>Developmental psychologists work in education, healthcare, social services, and research to support healthy development across all life stages.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Social Psychology">
+                        <h3>Social Psychology</h3>
+                        <p>Investigates how individuals' thoughts, feelings, and behaviors are influenced by the actual, imagined, or implied presence of others.</p>
+                        <div class="card-detail-box">
+                            <h4>Social Psychology</h4>
+                            <p>Social psychology examines how people's thoughts, feelings, and behaviors are influenced by others and social situations.</p>
+                            <h4>Key Areas:</h4>
+                            <ul>
+                                <li>Group dynamics and influence</li>
+                                <li>Attitudes and persuasion</li>
+                                <li>Stereotyping and prejudice</li>
+                                <li>Interpersonal relationships</li>
+                                <li>Conformity and obedience</li>
+                                <li>Social cognition</li>
+                            </ul>
+                            <h4>Career Applications:</h4>
+                            <p>Social psychologists work in marketing, public policy, education, healthcare, and organizational development to understand and improve social interactions.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1559757175-5700dde675bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Biological Psychology">
+                        <h3>Biological Psychology</h3>
+                        <p>Studies the relationship between biological processes and behavior, including brain function, genetics, and the nervous system.</p>
+                        <div class="card-detail-box">
+                            <h4>Biological Psychology</h4>
+                            <p>Biological psychology (also called biopsychology or neuropsychology) studies the biological basis of behavior, thoughts, and emotions.</p>
+                            <h4>Key Areas:</h4>
+                            <ul>
+                                <li>Brain structure and function</li>
+                                <li>Neurochemistry and neurotransmitters</li>
+                                <li>Genetics and behavior</li>
+                                <li>Hormones and behavior</li>
+                                <li>Neuroplasticity</li>
+                                <li>Evolutionary psychology</li>
+                            </ul>
+                            <h4>Career Applications:</h4>
+                            <p>Biological psychologists work in research labs, healthcare settings, pharmaceutical companies, and academic institutions studying the biological underpinnings of psychological processes.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Abnormal Psychology">
+                        <h3>Abnormal Psychology</h3>
+                        <p>Focuses on the study of unusual patterns of behavior, emotion, and thought that may indicate mental health disorders.</p>
+                        <div class="card-detail-box">
+                            <h4>Abnormal Psychology</h4>
+                            <p>Abnormal psychology studies unusual patterns of behavior, emotion, and thought that may be disruptive or distressing.</p>
+                            <h4>Key Areas:</h4>
+                            <ul>
+                                <li>Diagnosis and classification of disorders</li>
+                                <li>Causes of psychological disorders</li>
+                                <li>Treatment approaches</li>
+                                <li>Prevention strategies</li>
+                                <li>Cultural perspectives on abnormality</li>
+                            </ul>
+                            <h4>Career Applications:</h4>
+                            <p>Professionals in this field work as clinical psychologists, therapists, counselors, and researchers developing and implementing treatments for psychological disorders.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Organizational Psychology">
+                        <h3>Organizational Psychology</h3>
+                        <p>Applies psychological principles to workplace issues, including employee selection, training, motivation, and organizational behavior.</p>
+                        <div class="card-detail-box">
+                            <h4>Industrial Psychology</h4>
+                            <p>Industrial-organizational psychology applies psychological principles to workplace settings to improve productivity, satisfaction, and well-being.</p>
+                            <h4>Key Areas:</h4>
+                            <ul>
+                                <li>Employee selection and assessment</li>
+                                <li>Training and development</li>
+                                <li>Performance management</li>
+                                <li>Work motivation and job satisfaction</li>
+                                <li>Leadership and team dynamics</li>
+                                <li>Organizational development</li>
+                            </ul>
+                            <h4>Career Applications:</h4>
+                            <p>I/O psychologists work in corporate settings, consulting firms, government agencies, and research institutions to optimize human resources and workplace environments.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="career-strands" style="padding: 60px 0; background: #f4f6fb;">
+            <div class="container" style="max-width: 1200px; margin: 0 auto;">
+                <h2 style="text-align: center; font-size: 2.2em; font-weight: 700; color: #6a4c93; margin-bottom: 40px;">
+                    Explore Psychology Career Strands
+                </h2>
+                <div style="display: flex; flex-wrap: wrap; gap: 32px; justify-content: center;">
+                    <!-- Health Care Practice -->
+                    <div style="background: #fff; border-radius: 16px; box-shadow: 0 2px 16px rgba(106,76,147,0.08); width: 320px; overflow: hidden; display: flex; flex-direction: column; align-items: center;">
+                        <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=600&q=80" alt="Healthcare Practice" style="width: 100%; height: 180px; object-fit: cover;">
+                        <div style="padding: 24px;">
+                            <h3 style="color: #8e44ad; font-size: 1.3em; font-weight: 600; margin-bottom: 12px;">Health Care Practice</h3>
+                            <p style="color: #444;">Work in hospitals, clinics, or private practice to diagnose and treat mental health conditions, supporting patient well-being.</p>
+                        </div>
+                    </div>
+                    <!-- Educational Psychology -->
+                    <div style="background: #fff; border-radius: 16px; box-shadow: 0 2px 16px rgba(106,76,147,0.08); width: 320px; overflow: hidden; display: flex; flex-direction: column; align-items: center;">
+                        <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=600&q=80" alt="Educational Psychology" style="width: 100%; height: 180px; object-fit: cover;">
+                        <div style="padding: 24px;">
+                            <h3 style="color: #8e44ad; font-size: 1.3em; font-weight: 600; margin-bottom: 12px;">Educational Psychology</h3>
+                            <p style="color: #444;">Support students and teachers by applying psychological principles to improve learning outcomes and educational environments.</p>
+                        </div>
+                    </div>
+                    <!-- Industrial-Organizational Psychology -->
+                    <div style="background: #fff; border-radius: 16px; box-shadow: 0 2px 16px rgba(106,76,147,0.08); width: 320px; overflow: hidden; display: flex; flex-direction: column; align-items: center;">
+                        <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=600&q=80" alt="Industrial-Organizational Psychology" style="width: 100%; height: 180px; object-fit: cover;">
+                        <div style="padding: 24px;">
+                            <h3 style="color: #8e44ad; font-size: 1.3em; font-weight: 600; margin-bottom: 12px;">Industrial-Organizational Psychology</h3>
+                            <p style="color: #444;">Enhance workplace productivity and employee satisfaction by applying psychology to business and organizational challenges.</p>
+                        </div>
+                    </div>
+                    <!-- Forensic Psychology -->
+                    <div style="background: #fff; border-radius: 16px; box-shadow: 0 2px 16px rgba(106,76,147,0.08); width: 320px; overflow: hidden; display: flex; flex-direction: column; align-items: center;">
+                        <img src="https://images.unsplash.com/photo-1589578527966-fdac0f44566c?auto=format&fit=crop&w=600&q=80" alt="Forensic Psychology" style="width: 100%; height: 180px; object-fit: cover;">
+                        <div style="padding: 24px;">
+                            <h3 style="color: #8e44ad; font-size: 1.3em; font-weight: 600; margin-bottom: 12px;">Forensic Psychology</h3>
+                            <p style="color: #444;">Apply psychological expertise within the legal and criminal justice system, assisting in investigations, court cases, and rehabilitation.</p>
+                        </div>
+                    </div>
+                    <!-- Sports Psychology -->
+                    <div style="background: #fff; border-radius: 16px; box-shadow: 0 2px 16px rgba(106,76,147,0.08); width: 320px; overflow: hidden; display: flex; flex-direction: column; align-items: center;">
+                        <img src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=600&q=80" alt="Sports Psychology" style="width: 100%; height: 180px; object-fit: cover;">
+                        <div style="padding: 24px;">
+                            <h3 style="color: #8e44ad; font-size: 1.3em; font-weight: 600; margin-bottom: 12px;">Sports Psychology</h3>
+                            <p style="color: #444;">Help athletes enhance performance and mental resilience through psychological strategies and support.</p>
+                        </div>
+                    </div>
+                    <!-- Research & Academia -->
+                    <div style="background: #fff; border-radius: 16px; box-shadow: 0 2px 16px rgba(106,76,147,0.08); width: 320px; overflow: hidden; display: flex; flex-direction: column; align-items: center;">
+                        <img src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&w=600&q=80" alt="Research and Academia" style="width: 100%; height: 180px; object-fit: cover;">
+                        <div style="padding: 24px;">
+                            <h3 style="color: #8e44ad; font-size: 1.3em; font-weight: 600; margin-bottom: 12px;">Research & Academia</h3>
+                            <p style="color: #444;">Advance the field of psychology by conducting research, publishing findings, and teaching future professionals.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="career">
+            <div class="container">
+                <h2>Career Path & Opportunities</h2>
+                <div class="cards-grid">
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1551836022-deb4988cc6c0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Private Practice">
+                        <h3>Private Practice</h3>
+                        <p>Establish your own therapy practice, offering specialized services and building long-term client relationships.</p>
+                    </div>
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Healthcare Settings">
+                        <h3>Healthcare Settings</h3>
+                        <p>Work in hospitals, clinics, and mental health facilities as part of multidisciplinary healthcare teams.</p>
+                    </div>
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Academic Research">
+                        <h3>Academic Research</h3>
+                        <p>Contribute to the field through research, teaching, and mentoring future psychologists in university settings.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq">
+            <div class="container">
+                <h2>Psychology Career Insights</h2>
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        What makes Psychology different from other careers?
+                    </div>
+                    <div class="accordion-content">
+                        <p>Psychology is the science of human behavior, while a psychology career is the set of jobs and professions that emerge from that science. .</p>
+                        <ul>
+                            <li>Emphasis on evidence-based therapeutic interventions</li>
+                            <li>Integration of research and clinical practice</li>
+                            <li>Focus on prevention and long-term mental wellness</li>
+                            <li>Holistic approach to human behavior and cognition</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        Can I specialize in multiple areas of psychology?
+                    </div>
+                    <div class="accordion-content">
+                        <p>Yes! Many psychologists develop expertise in multiple areas. Common combinations include clinical and research psychology, developmental and educational psychology, or social and organizational psychology. This versatility makes you more marketable and allows for diverse career opportunities.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        What's the earning potential in different psychology fields?
+                    </div>
+                    <div class="accordion-content">
+                        <p>Psychology offers competitive salaries that vary by specialization:</p>
+                        <ul>
+                            <li>Clinical Psychologists: $80,000 - $120,000 annually</li>
+                            <li>Industrial-Organizational: $90,000 - $150,000 annually</li>
+                            <li>Neuropsychologists: $85,000 - $130,000 annually</li>
+                            <li>Research Psychologists: $70,000 - $110,000 annually</li>
+                            <li>Private Practice: $100,000 - $200,000+ annually</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        How do I know if psychology is right for me?
+                    </div>
+                    <div class="accordion-content">
+                        <p>Consider psychology if you have strong interpersonal skills, enjoy helping others, are curious about human behavior, and can handle emotional situations professionally. Volunteer at mental health organizations, shadow professionals, or take introductory psychology courses to explore your interest.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact" id="contact">
+            <div class="container">
+                <h2> Career Roadmap</h2>
+                <div class="career-roadmap">
+                    <div class="roadmap-item">
+                        <div class="roadmap-icon">🎓</div>
+                        <h3>Phase 1: Foundation (Years 1-4)</h3>
+                        <p>Complete your Bachelor's degree in Psychology, building a strong foundation in human behavior, research methods, and psychological theories. Focus on maintaining excellent grades and gaining research experience.</p>
+                    </div>
+                    <div class="roadmap-item">
+                        <div class="roadmap-icon">🔬</div>
+                        <h3>Phase 2: Specialization (Years 5-7)</h3>
+                        <p>Pursue your Master's degree, choosing a specialization that aligns with your passion. Gain clinical experience through internships and supervised practice.</p>
+                    </div>
+                    <div class="roadmap-item">
+                        <div class="roadmap-icon">💼</div>
+                        <h3>Phase 3: Professional Development (Years 8-10)</h3>
+                        <p>Complete your doctorate (Ph.D. or Psy.D.), obtain licensure, and begin your professional career. Continue learning and growing in your chosen field.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="references">
+            <div class="container">
+                <h2>References & Sources</h2>
+                <div class="references-grid">
+                    <div class="reference-card">
+                        <h3>Academic Sources</h3>
+                        <ul>
+                            <li><a href="https://www.apa.org" target="_blank" class="reference-link">American Psychological Association (APA)</a></li>
+                <li><a href="https://onlinelibrary.wiley.com/journal/10974679" target="_blank" class="reference-link">Journal of Clinical Psychology</a></li>
+                <li><a href="https://journals.sagepub.com/home/pss" target="_blank" class="reference-link">Psychological Science</a></li>
+                <li><a href="https://www.apa.org/pubs/journals/dev" target="_blank" class="reference-link">Developmental Psychology</a></li>
+                        </ul>
+                    </div>
+                    <div class="reference-card">
+                        <h3>Research Institutions</h3>
+                        <ul>
+                            <li><a href="https://psychology.stanford.edu" target="_blank" class="reference-link">Stanford Psychology Department</a></li>
+                <li><a href="https://psychology.harvard.edu" target="_blank" class="reference-link">Harvard Psychology Research</a></li>
+                <li><a href="https://bcs.mit.edu" target="_blank" class="reference-link">MIT Brain & Cognitive Sciences</a></li>
+                <li><a href="https://www.psych.ucla.edu" target="_blank" class="reference-link">UCLA Psychology Department</a></li>
+                        </ul>
+                    </div>
+                    <div class="reference-card">
+                        <h3>Professional Organizations</h3>
+                        <ul>
+                            <li><a href="https://www.psychologicalscience.org" target="_blank" class="reference-link">Association for Psychological Science</a></li>
+                <li><a href="https://spsp.org" target="_blank" class="reference-link">Society for Personality & Social Psychology</a></li>
+                <li><a href="https://iaapsy.org" target="_blank" class="reference-link">International Association of Applied Psychology</a></li>
+                <li><a href="https://www.efpa.eu" target="_blank" class="reference-link">European Federation of Psychologists</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // Accordion functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const accordionHeaders = document.querySelectorAll('.accordion-header');
+            
+            accordionHeaders.forEach(header => {
+                header.addEventListener('click', function() {
+                    const content = this.nextElementSibling;
+                    const isActive = content.classList.contains('active');
+                    
+                    // Close all accordion items
+                    document.querySelectorAll('.accordion-content').forEach(item => {
+                        item.classList.remove('active');
+                    });
+                    
+                    // Open clicked item if it wasn't active
+                    if (!isActive) {
+                        content.classList.add('active');
+                    }
+                });
+            });
+        });
+    </script>
+
+    <footer>
+                    <div class="container">
+                <div class="footer-links">
+                    <ul>
+                        <li><a href="#overview" class="footer-link" data-tooltip="Explore the diverse career opportunities in psychology, from clinical practice to research and organizational development.">Career Overview</a></li>
+                        <li><a href="#education" class="footer-link" data-tooltip="Learn about the educational path: Bachelor's degree (4 years), Master's degree (2-3 years), and Doctorate (4-7 years).">Education Path</a></li>
+                        <li><a href="#skills" class="footer-link" data-tooltip="Discover essential skills: communication, empathy, critical thinking, and analytical abilities needed for success.">Required Skills</a></li>
+                        <li><a href="#studies" class="footer-link" data-tooltip="Explore different areas: Cognitive, Developmental, Social, Biological, Abnormal, and Industrial Psychology.">Psychology Studies</a></li>
+                        <li><a href="#career" class="footer-link" data-tooltip="Career paths include private practice, healthcare settings, academic research, and organizational consulting.">Career Opportunities</a></li>
+                    </ul>
+                </div>
+                <p style="position: relative; z-index: <p>&copy; 2024 Psychology is the scientific study of the mind, brain, and behavior, encompassing both internal mental processes like thoughts and emotions, and outward, observable behaviors Career Guide. Your comprehensive guide to building a successful career in emerging technologies.</p>
+            </div>
+    </footer>
